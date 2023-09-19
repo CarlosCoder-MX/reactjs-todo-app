@@ -1,12 +1,17 @@
 import { useState } from "react";
 
-function TaskForm() {
+export default function TaskForm({onAdd}) {
      
     const [taskName,setTaskName] = useState('');
+    function handleSubmit(ev) {
+      ev.preventDefault();
+      onAdd(taskName);
+      setTaskName('');
+    }
 
     return(
-        <form>
-        <button>
+        <form onSubmit={handleSubmit}>
+        <button >
           +
         </button>
         <input 
@@ -17,5 +22,3 @@ function TaskForm() {
       </form>
     );
 }
-
-export default TaskForm;

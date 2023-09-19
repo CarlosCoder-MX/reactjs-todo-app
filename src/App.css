@@ -21,6 +21,7 @@ form {
 
 form input[type="Text"] {
   background: none;
+  color: #fff;
   border: 0;
   padding: 0px 8px;
   display: block;

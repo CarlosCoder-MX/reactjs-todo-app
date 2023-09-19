@@ -1,10 +1,9 @@
-import { useState } from "react";
 
-export default function Checkbox(defaultChecked : boolean = false ) {
-  const [checked, setChecked] = useState(defaultChecked);
+
+export default function Checkbox({checked, onClick}) {
 
   return (
-    <div>
+    <div onClick={onClick}>
       {!checked && (
         <div className="checkbox unchecked">
           <svg
