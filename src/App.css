@@ -42,10 +42,34 @@ div.task {
   padding: 5px 9px;
   margin-top: 5px;
   display: flex;
+  transition: opacity .35s linear;
 }
 
 div.task svg {
   height: 20px;
   margin-right: 6px;
   fill: #61DAFB;
+}
+
+div.task.done{
+  opacity: 0.3;
+  text-decoration: line-through;
+}
+
+div.task span {
+  position: relative;
+}
+
+div.task span:before {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 1px;
+  background-color: #ddd;
+  position: absolute;
+  top: 10px;
+  transition: width .35s linear;
+}
+div.task.done span:before {
+  width: 100%;
 }
