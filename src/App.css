@@ -4,7 +4,7 @@
 
 body {
   background-color: #17181f; 
-  color: #aaa; 
+  color: #ddd; 
 }
 
 main {
@@ -46,5 +46,6 @@ div.task {
 
 div.task svg {
   height: 20px;
-  margin-right: 4px;
+  margin-right: 6px;
+  fill: #61DAFB;
 }
